@@ -1,13 +1,11 @@
 import React from 'react';
-import './../fruitables-1.0.0/css/bootstrap.min.css'
-import './../fruitables-1.0.0/css/style.css'
+import { Link } from 'react-router-dom';
 
 function Middle() {
   const topLinkStyle = {
     textDecoration: 'none',
     color: 'white',
-    marginRight: '2px', // 예시로 추가한 스타일
-    // 원하는 다른 스타일 속성들을 추가해주세요
+    marginRight: '2px', 
     top: '0',
     right: '25%'
   };
@@ -15,61 +13,103 @@ function Middle() {
   return (
 
       <div>
-       <div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-fullscreen">
-                <div class="modal-content rounded-0">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Search by keyword</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body d-flex align-items-center">
-                        <div class="input-group w-75 mx-auto d-flex">
-                            <input type="search" class="form-control p-3" placeholder="keywords" aria-describedby="search-icon-1" />
-                            <span id="search-icon-1" class="input-group-text p-3"><i class="fa fa-search"></i></span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
 
-
-        <div class="container-fluid py-5 mb-5 hero-header">
+  {/* <!-- Featurs Start --> */}
+        {/* <h1 class="mb-6">할인 탑3</h1> */}
+        <div class="container-fluid service py-5">
             <div class="container py-5">
-                <div class="row g-5 align-items-center">
-                    <div class="col-md-12 col-lg-7">
-                        <h4 class="mb-3 text-secondary">100% Organic Foods</h4>
-                        <h1 class="mb-5 display-3 text-primary">Organic Veggies & Fruits Foods</h1>
-                        <div class="position-relative mx-auto">
-                            <input class="form-control border-2 border-secondary w-75 py-3 px-4 rounded-pill" type="number" placeholder="Search" />
-                            <button type="submit" class="btn btn-primary border-2 border-secondary py-3 px-4 position-absolute rounded-pill text-white h-100" style={topLinkStyle}>Submit Now</button>
-                        </div>
-                    </div>
-                    <div class="col-md-12 col-lg-5">
-                        <div id="carouselId" class="carousel slide position-relative" data-bs-ride="carousel">
-                            <div class="carousel-inner" role="listbox">
-                                <div class="carousel-item active rounded">
-                                    <img src="img/hero-img-1.png" class="img-fluid w-100 h-100 bg-secondary rounded" alt="First slide" />
-                                    <a href="#" class="btn px-4 py-2 text-white rounded">Fruites</a>
-                                </div>
-                                <div class="carousel-item rounded">
-                                    <img src="img/hero-img-2.jpg" class="img-fluid w-100 h-100 rounded" alt="Second slide" />
-                                    <a href="#" class="btn px-4 py-2 text-white rounded">Vesitables</a>
+                <div class="row g-4 justify-content-center">
+                    <div class="col-md-6 col-lg-4">
+                        <Link href="#">
+                            <div class="service-item bg-secondary rounded border border-secondary">
+                                <img src="img/best1.jpg" class="img-fluid rounded-top w-100" alt="" />
+                                <div class="px-4 rounded-bottom">
+                                    <div class="service-content bg-primary text-center p-4 rounded">
+                                        <h5 class="text-white">Fresh Apples</h5>
+                                        <h3 class="mb-0">20% OFF</h3>
+                                    </div>
                                 </div>
                             </div>
-                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselId" data-bs-slide="prev">
-                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                <span class="visually-hidden">Previous</span>
-                            </button>
-                            <button class="carousel-control-next" type="button" data-bs-target="#carouselId" data-bs-slide="next">
-                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                <span class="visually-hidden">Next</span>
-                            </button>
-                        </div>
+                        </Link>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <Link href="#">
+                            <div class="service-item bg-dark rounded border border-dark">
+                                <img src="img/best2-1.jpg" class="img-fluid rounded-top w-100" alt="" />
+                                <div class="px-4 rounded-bottom">
+                                    <div class="service-content bg-light text-center p-4 rounded">
+                                        <h5 class="text-primary">신세계상품권 교환권</h5>
+                                        <h3 class="mb-0">8,000 <sub>Point</sub></h3>신세계백화점
+                                    </div>
+                                </div>
+                            </div>
+                        </Link>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <Link href="#">
+                            <div class="service-item bg-primary rounded border border-primary">
+                                <img src="img/best3.jpg" class="img-fluid rounded-top w-100" alt="" />
+                                <div class="px-4 rounded-bottom">
+                                    <div class="service-content bg-secondary text-center p-4 rounded">
+                                        <h5 class="text-white"><small>아메리카노 + 카스테라</small></h5>
+                                        <h3 class="mb-0">10,000 <sub>Point</sub> </h3>스타벅스
+                                    </div>
+                                </div>
+                            </div>
+                        </Link>
                     </div>
                 </div>
             </div>
         </div>
-        {/* <!-- Hero End --> */}
+        {/* <!-- Featurs End --> */}
+  {/* <!-- Featurs Start --> */}
+        <div class="container-fluid service py-5">
+            <div class="container py-5">
+                <div class="row g-4 justify-content-center">
+                    <div class="col-md-6 col-lg-4">
+                        <Link href="#">
+                            <div class="service-item bg-secondary rounded border border-secondary">
+                                <img src="img/best1.jpg" class="img-fluid rounded-top w-100" alt="" />
+                                <div class="px-4 rounded-bottom">
+                                    <div class="service-content bg-primary text-center p-4 rounded">
+                                        <h5 class="text-white">Fresh Apples</h5>
+                                        <h3 class="mb-0">20% OFF</h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </Link>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <Link href="#">
+                            <div class="service-item bg-dark rounded border border-dark">
+                                <img src="img/best2-1.jpg" class="img-fluid rounded-top w-100" alt="" />
+                                <div class="px-4 rounded-bottom">
+                                    <div class="service-content bg-light text-center p-4 rounded">
+                                        <h5 class="text-primary">신세계상품권 교환권</h5>
+                                        <h3 class="mb-0">8,000 원</h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </Link>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <Link href="#">
+                            <div class="service-item bg-primary rounded border border-primary">
+                                <img src="img/best3.jpg" class="img-fluid rounded-top w-100" alt="" />
+                                <div class="px-4 rounded-bottom">
+                                    <div class="service-content bg-secondary text-center p-4 rounded">
+                                        <h5 class="text-white"><small>카페 아메리카노 T 2잔 + 부드러운 생크림 카스텔라</small></h5>
+                                        <h3 class="mb-0">10,000 원 </h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </Link>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {/* <!-- Featurs End --> */}
+
   </div>
   )
 };

@@ -1,6 +1,4 @@
 import React from 'react';
-import './../fruitables-1.0.0/css/bootstrap.min.css'
-import './../fruitables-1.0.0/css/style.css'
 
 function Footer() {
 

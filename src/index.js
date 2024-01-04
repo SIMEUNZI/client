@@ -1,7 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-// import './fruitables-1.0.0/css/bootstrap.min.css'
-// import './index.css';
+import './fruitables-1.0.0/css/bootstrap.min.css';
+import './fruitables-1.0.0/css/style.css';
+
+
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from 'react-router-dom';

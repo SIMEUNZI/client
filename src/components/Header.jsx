@@ -1,6 +1,7 @@
 import React from 'react';
 import './../fruitables-1.0.0/css/bootstrap.min.css'
 import './../fruitables-1.0.0/css/style.css'
+import { Link } from 'react-router-dom';
 
 function Header() {
   const topLinkStyle = {
@@ -15,7 +16,7 @@ function Header() {
   <div>
     <head>
         <meta charset="utf-8" />
-        <title>Fruitables - Vegetable Website Template</title>
+        <title>3조 Project</title>
         <meta content="width=device-width, initial-scale=1.0" name="viewport" />
         <meta content="" name="keywords" />
         <meta content="" name="description" />
@@ -42,64 +43,66 @@ function Header() {
     </head>
 
     <div>
-      <div className="container-fluid fixed-top">
+      <div className="container-fluid">
         <div className="container topbar bg-primary d-none d-lg-block">
           <div className="d-flex justify-content-between">
             <div className="top-info ps-2">
               <small className="me-3">
                 <i className="fas fa-map-marker-alt me-2 text-secondary"></i>
-                <a href="#" className="text-white">123 Street, New York</a>
+                <Link href="https://www.multicampus.com/cs/map/mapMain?p_menu=MTA1I01BSU4=&p_gubun=Qw==&req=0" className="text-white">Multi-Campus</Link>
               </small>
               <small className="me-3">
                 <i className="fas fa-envelope me-2 text-secondary"></i>
-                <a href="#" className="text-white">Email@Example.com</a>
+                <Link href="https://github.com/gigamackijo-project/CarrotCon.git" className="text-white">gigamackijo.git</Link>
               </small>
             </div>
             <div className="top-link pe-2" style={topLinkStyle}>
-              <a href="#" className="text-white">
+              <Link href="#" className="text-white">
                 <small className="text-white mx-2">Privacy Policy</small>
-              </a>
-              <a href="#" className="text-white">
+              </Link>
+              <Link href="#" className="text-white">
                 <small className="text-white mx-2">Terms of Use</small>
-              </a>
-              <a href="#" className="text-white">
+              </Link>
+              <Link href="#" className="text-white">
                 <small className="text-white ms-2">Sales and Refunds</small>
-              </a>
+              </Link>
             </div>
           </div>
         </div>
          </div>
            <div class="container px-0">
                 <nav class="navbar navbar-light bg-white navbar-expand-xl">
-                    <a href="index.html" class="navbar-brand"><h1 class="text-primary display-6">Fruitables</h1></a>
+                    <Link href="index.html" class="navbar-brand"><h1 class="text-primary display-6">CarrotCon</h1></Link>
                     <button class="navbar-toggler py-2 px-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                         <span class="fa fa-bars text-primary"></span>
                     </button>
                     <div class="collapse navbar-collapse bg-white" id="navbarCollapse">
                         <div class="navbar-nav mx-auto">
-                            <a href="index.html" class="nav-item nav-link active">Home</a>
-                            <a href="shop.html" class="nav-item nav-link">Shop</a>
-                            <a href="shop-detail.html" class="nav-item nav-link">Shop Detail</a>
+                            <Link to="/" class="nav-item nav-link active">Home</Link>
+                            <Link to="/shop" className="nav-item nav-link">Shop</Link>
+                            <Link to="shop-detail.html" class="nav-item nav-link">community</Link>
                             <div class="nav-item dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
+                                <Link to="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">My pages</Link>
                                 <div class="dropdown-menu m-0 bg-secondary rounded-0">
-                                    <a href="cart.html" class="dropdown-item">Cart</a>
-                                    <a href="chackout.html" class="dropdown-item">Chackout</a>
-                                    <a href="testimonial.html" class="dropdown-item">Testimonial</a>
-                                    <a href="404.html" class="dropdown-item">404 Page</a>
+                                    <Link to="cart.html" class="dropdown-item">Cart</Link>
+                                    <Link to="chackout.html" class="dropdown-item">Chackout</Link>
+                                    <Link to="testimonial.html" class="dropdown-item">Testimonial</Link>
+                                    <Link to="404.html" class="dropdown-item">404 Page</Link>
                                 </div>
                             </div>
-                            <a href="contact.html" class="nav-item nav-link">Contact</a>
+
+
                         </div>
                         <div class="d-flex m-3 me-0">
-                            <button class="btn-search btn border border-secondary btn-md-square rounded-circle bg-white me-4" data-bs-toggle="modal" data-bs-target="#searchModal"><i class="fas fa-search text-primary"></i></button>
-                            <a href="#" class="position-relative me-4 my-auto">
+                            <Link to="login" class="nav-item nav-link"><sup>Login</sup></Link>
+                            <Link to="signup" class="nav-item nav-link"><sup>Signup</sup></Link>
+                            <Link href="#" class="position-relative me-4 my-auto">
                                 <i class="fa fa-shopping-bag fa-2x"></i>
                                 <span class="position-absolute bg-secondary rounded-circle d-flex align-items-center justify-content-center text-dark px-1" style= {{top: '-5px', left: '15px', height: '20px', minWidth: '20px'}}>3</span>
-                            </a>
-                            <a href="#" class="my-auto">
+                            </Link>
+                            <Link href="#" class="my-auto">
                                 <i class="fas fa-user fa-2x"></i>
-                            </a>
+                            </Link>
                         </div>
                     </div>
                 </nav>
