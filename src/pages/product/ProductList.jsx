@@ -17,8 +17,6 @@ function ProductList() {
 
       <div>
   
-      <Header />
-      <Middle />
         <div class="container-fluid fruite py-5">
             <div class="container py-5">
                 <div class="tab-class text-center">
@@ -358,8 +356,6 @@ function ProductList() {
                 </div>      
             </div>
         </div>
-      <Footer />
-
 </div>
   )
 };

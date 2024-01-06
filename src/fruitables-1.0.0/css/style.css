@@ -178,7 +178,7 @@
 
 /*** Hero Header ***/
 .hero-header {
-    background: linear-gradient(rgba(248, 223, 173, 0.1), rgba(248, 223, 173, 0.1)), url(../img/hero-img.jpg);
+    background: linear-gradient(rgba(248, 223, 173, 0.1), rgba(248, 223, 173, 0.1)), url(../img/bg3.png);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -219,7 +219,7 @@
 
 .page-header {
     position: relative;
-    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../img/cart-page-header-img.jpg);
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../img/bg22.jpg);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -389,6 +389,10 @@
 .banner .banner-btn:hover {
     background: var(--bs-primary);
 }
+
+.banner-btn {
+      margin-top: -110px; /* 버튼을 위로 이동 */
+}
 /*** Banner Section End ***/
 
 
@@ -498,5 +502,24 @@
 
 .light-gray-text {
   color: lightgray;
+}
+
+.navbar2 {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  background-color: white; /* 흰색 배경 추가 */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 그림자 추가 */
+  transition: box-shadow 0.3s ease; /* 그림자 변화에 대한 transition 효과 추가 */
+}
+
+/* 스크롤 시 그림자 표시 */
+.navbar2.scrolled {
+ box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.5);
+}
+
+.best1 {
+ height: 1000px;
 }
 

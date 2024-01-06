@@ -1,7 +1,11 @@
 import React from 'react';
+import Navbar from './Navbar';
+
 import './../fruitables-1.0.0/css/bootstrap.min.css'
 import './../fruitables-1.0.0/css/style.css'
+
 import { Link } from 'react-router-dom';
+import { RecoilRoot } from 'recoil';
 
 function Header() {
   const topLinkStyle = {
@@ -42,29 +46,29 @@ function Header() {
         <link href="css/style.css" rel="stylesheet" />
     </head>
 
-    <div>
+    <div className='navbar2'> 
       <div className="container-fluid">
         <div className="container topbar bg-primary d-none d-lg-block">
           <div className="d-flex justify-content-between">
             <div className="top-info ps-2">
               <small className="me-3">
                 <i className="fas fa-map-marker-alt me-2 text-secondary"></i>
-                <Link href="https://www.multicampus.com/cs/map/mapMain?p_menu=MTA1I01BSU4=&p_gubun=Qw==&req=0" className="text-white">Multi-Campus</Link>
+                <a href="https://www.multicampus.com/cs/map/mapMain?p_menu=MTA1I01BSU4=&p_gubun=Qw==&req=0" className="text-white">Multi-Campus</a>
               </small>
               <small className="me-3">
                 <i className="fas fa-envelope me-2 text-secondary"></i>
-                <Link href="https://github.com/gigamackijo-project/CarrotCon.git" className="text-white">gigamackijo.git</Link>
+                <a href="https://github.com/gigamackijo-project/CarrotCon.git" className="text-white">gigamackijo.git</a>
               </small>
             </div>
             <div className="top-link pe-2" style={topLinkStyle}>
               <Link href="#" className="text-white">
-                <small className="text-white mx-2">Privacy Policy</small>
+                <small className="text-white mx-2">Park</small>/
               </Link>
               <Link href="#" className="text-white">
-                <small className="text-white mx-2">Terms of Use</small>
+                <small className="text-white mx-2">Sim</small>/
               </Link>
               <Link href="#" className="text-white">
-                <small className="text-white ms-2">Sales and Refunds</small>
+                <small className="text-white ms-2">Lee</small>
               </Link>
             </div>
           </div>
@@ -79,14 +83,14 @@ function Header() {
                     <div class="collapse navbar-collapse bg-white" id="navbarCollapse">
                         <div class="navbar-nav mx-auto">
                             <Link to="/" class="nav-item nav-link active">Home</Link>
-                            <Link to="/shop" className="nav-item nav-link">Shop</Link>
-                            <Link to="shop-detail.html" class="nav-item nav-link">community</Link>
+                            <Link to="shop" className="nav-item nav-link">Shop</Link>
+                            <Link to="shop-detail.html" class="nav-item nav-link">Community</Link>
                             <div class="nav-item dropdown">
                                 <Link to="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">My pages</Link>
                                 <div class="dropdown-menu m-0 bg-secondary rounded-0">
-                                    <Link to="cart.html" class="dropdown-item">Cart</Link>
-                                    <Link to="chackout.html" class="dropdown-item">Chackout</Link>
-                                    <Link to="testimonial.html" class="dropdown-item">Testimonial</Link>
+                                    <Link to="cart.html" class="dropdown-item">Sell or Buy</Link>
+                                    <Link to="chackout.html" class="dropdown-item">Wishlist</Link>
+                                    <Link to="testimonial.html" class="dropdown-item">Profile</Link>
                                     <Link to="404.html" class="dropdown-item">404 Page</Link>
                                 </div>
                             </div>
@@ -94,8 +98,12 @@ function Header() {
 
                         </div>
                         <div class="d-flex m-3 me-0">
-                            <Link to="login" class="nav-item nav-link"><sup>Login</sup></Link>
-                            <Link to="signup" class="nav-item nav-link"><sup>Signup</sup></Link>
+                          <>
+                          <RecoilRoot>  
+                            <Navbar />
+                          </RecoilRoot>
+                          </>
+                            <Link to="signup" class="nav-item nav-link"><sub>Signup</sub></Link>
                             <Link href="#" class="position-relative me-4 my-auto">
                                 <i class="fa fa-shopping-bag fa-2x"></i>
                                 <span class="position-absolute bg-secondary rounded-circle d-flex align-items-center justify-content-center text-dark px-1" style= {{top: '-5px', left: '15px', height: '20px', minWidth: '20px'}}>3</span>
@@ -109,6 +117,8 @@ function Header() {
             </div>
         </div>
         {/* <!-- Navbar End --> */}
+        {/* <!-- Back to Top --> */}
+        <a href="#" class="btn btn-primary border-3 border-primary rounded-circle back-to-top"><i class="fa fa-arrow-up"></i></a>   
 
     </div>    
   );
