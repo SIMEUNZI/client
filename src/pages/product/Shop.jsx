@@ -1,5 +1,9 @@
 import React from 'react';
-import ProductUp from '../../components/products/ProductUp';
+import PRbutton from '../../components/products/PRbutton';
+import HeartIcon from '../../components/products/HeartIcon';
+
+// import { useHistory } from 'react-router-dom';
+
 
 
 function Shop() {
@@ -7,7 +11,7 @@ function Shop() {
   return (
         <div>
 
-        {/* <!-- Single Page Header start --> */}
+        {/* <!-- Single Page Header heartt --> */}
         <div class="container-fluid page-header py-5">
             <h1 class="text-center text-white display-6">Shop</h1>
             <ol class="breadcrumb justify-content-center mb-0">
@@ -19,7 +23,7 @@ function Shop() {
         {/* <!-- Single Page Header End --> */}
 
 
-        {/* <!-- Fruits Shop Start--> */}
+        {/* <!-- Fruits Shop heartt--> */}
         <div class="container-fluid fruite py-5">
             <div class="container py-5">
                 <h1 class="mb-4">Gift shop</h1>
@@ -27,8 +31,7 @@ function Shop() {
                     <div class="col-lg-12">
                         <div class="row g-4">
                             <div class="col-xl-3">
-                            <ProductUp />
-
+                                 <PRbutton />      {/* 상품등록 버튼 */}
                             </div>
                             <div class="col-6"> 
                                 <div class="input-group w-100 mx-auto d-flex">
@@ -52,17 +55,17 @@ function Shop() {
                                 <div class="row g-4">
                                     <div class="col-lg-12">
                                         <div class="mb-3">
-                                            <h4>Categories</h4>
+                                            <h4>가격대별</h4>
                                             <ul class="list-unstyled fruite-categorie">
                                                 <li>
                                                     <div class="d-flex justify-content-between fruite-name">
-                                                        <a href="#"><i class="fas fa-apple-alt me-2"></i>Apples</a>
+                                                        <a href="#"><i class="fas fa-apple-alt me-2"></i>10,000 Point</a>
                                                         <span>(3)</span>
                                                     </div>
                                                 </li>
                                                 <li>
                                                     <div class="d-flex justify-content-between fruite-name">
-                                                        <a href="#"><i class="fas fa-apple-alt me-2"></i>Oranges</a>
+                                                        <a href="#"><i class="fas fa-apple-alt me-2"></i>20,000 Point</a>
                                                         <span>(5)</span>
                                                     </div>
                                                 </li>
@@ -88,51 +91,15 @@ function Shop() {
                                         </div>
                                     </div>
                                     <div class="col-lg-12">
-                                        <div class="mb-3">
-                                            <h4 class="mb-2">Price</h4>
-                                            <input type="range" class="form-range w-100" id="rangeInput" name="rangeInput" min="0" max="500" value="0" oninput="amount.value=rangeInput.value" />
-                                            <output id="amount" name="amount" min-velue="0" max-value="500" for="rangeInput">0</output>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-12">
-                                        <div class="mb-3">
-                                            <h4>Additional</h4>
-                                            <div class="mb-2">
-                                                <input type="radio" class="me-2" id="Categories-1" name="Categories-1" value="Beverages" />
-                                                <label for="Categories-1"> Organic</label>
-                                            </div>
-                                            <div class="mb-2">
-                                                <input type="radio" class="me-2" id="Categories-2" name="Categories-1" value="Beverages" />
-                                                <label for="Categories-2"> Fresh</label>
-                                            </div>
-                                            <div class="mb-2">
-                                                <input type="radio" class="me-2" id="Categories-3" name="Categories-1" value="Beverages" />
-                                                <label for="Categories-3"> Sales</label>
-                                            </div>
-                                            <div class="mb-2">
-                                                <input type="radio" class="me-2" id="Categories-4" name="Categories-1" value="Beverages" />
-                                                <label for="Categories-4"> Discount</label>
-                                            </div>
-                                            <div class="mb-2">
-                                                <input type="radio" class="me-2" id="Categories-5" name="Categories-1" value="Beverages" />
-                                                <label for="Categories-5"> Expired</label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-12">
-                                        <h4 class="mb-3">Featured products</h4>
-                                        <div class="d-flex align-items-center justify-content-start">
+                                        <h4 class="mb-3">최근 본 상품</h4>
+                                        <div class="d-flex align-items-center justify-content-heartt">
                                             <div class="rounded me-4" style={{width: '100px', height: '100px'}}>
-                                                <img src="img/featur-1.jpg" class="img-fluid rounded" alt="" />
+                                                <img src="img/best3.jpg" class="img-fluid rounded" alt="" />
                                             </div>
                                             <div>
-                                                <h6 class="mb-2">Big Banana</h6>
+                                                <h6 class="mb-2">BHC</h6>
                                                 <div class="d-flex mb-2">
-                                                    <i class="fa fa-star text-secondary"></i>
-                                                    <i class="fa fa-star text-secondary"></i>
-                                                    <i class="fa fa-star text-secondary"></i>
-                                                    <i class="fa fa-star text-secondary"></i>
-                                                    <i class="fa fa-star"></i>
+                                                      <HeartIcon />
                                                 </div>
                                                 <div class="d-flex mb-2">
                                                     <h5 class="fw-bold me-2">2.99 $</h5>
@@ -140,37 +107,29 @@ function Shop() {
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="d-flex align-items-center justify-content-start">
+                                        <div class="d-flex align-items-center justify-content-heartt">
                                             <div class="rounded me-4" style={{width: '100px', height: '100px'}}>
-                                                <img src="img/featur-2.jpg" class="img-fluid rounded" alt="" />
+                                                <img src="img/best3.jpg" class="img-fluid rounded" alt="" />
                                             </div>
                                             <div>
-                                                <h6 class="mb-2">Big Banana</h6>
+                                                <h6 class="mb-2">스타벅스</h6>
                                                 <div class="d-flex mb-2">
-                                                    <i class="fa fa-star text-secondary"></i>
-                                                    <i class="fa fa-star text-secondary"></i>
-                                                    <i class="fa fa-star text-secondary"></i>
-                                                    <i class="fa fa-star text-secondary"></i>
-                                                    <i class="fa fa-star"></i>
+                                                     <HeartIcon />
                                                 </div>
                                                 <div class="d-flex mb-2">
-                                                    <h5 class="fw-bold me-2">2.99 $</h5>
-                                                    <h5 class="text-danger text-decoration-line-through">4.11 $</h5>
+                                                    <h5 class="fw-bold me-2">10 $</h5>
+                                                    <h5 class="text-danger text-decoration-line-through">13.5 $</h5>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="d-flex align-items-center justify-content-start">
+                                        <div class="d-flex align-items-center justify-content-heartt">
                                             <div class="rounded me-4" style={{width: '100px', height: '100px'}}>
-                                                <img src="img/featur-3.jpg" class="img-fluid rounded" alt="" />
+                                                <img src="img/best3.jpg" class="img-fluid rounded" alt="" />
                                             </div>
                                             <div>
-                                                <h6 class="mb-2">Big Banana</h6>
+                                                <h6 class="mb-2">신세계상품권</h6>
                                                 <div class="d-flex mb-2">
-                                                    <i class="fa fa-star text-secondary"></i>
-                                                    <i class="fa fa-star text-secondary"></i>
-                                                    <i class="fa fa-star text-secondary"></i>
-                                                    <i class="fa fa-star text-secondary"></i>
-                                                    <i class="fa fa-star"></i>
+                                                    <HeartIcon />
                                                 </div>
                                                 <div class="d-flex mb-2">
                                                     <h5 class="fw-bold me-2">2.99 $</h5>
@@ -197,15 +156,14 @@ function Shop() {
                                     <div class="col-md-6 col-lg-6 col-xl-4">
                                         <div class="rounded position-relative fruite-item">
                                             <div class="fruite-img">
-                                                <img src="img/fruite-item-5.jpg" class="img-fluid w-100 rounded-top" alt="" />
+                                                <img src="img/best4.jpg" class="img-fluid w-100 rounded-top" alt="" />
                                             </div>
-                                            <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style={{top: '10px', left: '10px'}}>Fruits</div>
                                             <div class="p-4 border border-secondary border-top-0 rounded-bottom">
-                                                <h4>Grapes</h4>
-                                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
+                                                <h4>굽네치킨</h4>
+                                                <p>오리지널+갈비천왕피자+콜라1.25L</p>
                                                 <div class="d-flex justify-content-between flex-lg-wrap">
-                                                    <p class="text-dark fs-5 fw-bold mb-0">$4.99 / kg</p>
-                                                    <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
+                                                    <p class="text-dark fs-5 fw-bold mb-0">P 30,000</p>
+                                                    <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="me-2 text-primary"><HeartIcon /></i>구매하기</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -213,15 +171,14 @@ function Shop() {
                                     <div class="col-md-6 col-lg-6 col-xl-4">
                                         <div class="rounded position-relative fruite-item">
                                             <div class="fruite-img">
-                                                <img src="img/fruite-item-5.jpg" class="img-fluid w-100 rounded-top" alt="" />
+                                                <img src="img/best1.jpg" class="img-fluid w-100 rounded-top" alt="" />
                                             </div>
-                                            <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style={{top: '10px', left: '10px'}}>Fruits</div>
                                             <div class="p-4 border border-secondary border-top-0 rounded-bottom">
-                                                <h4>Grapes</h4>
-                                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
+                                                <h4>굽네치킨</h4>
+                                                <p>불금치킨+모짜치즈볼+콜라1.25L</p>
                                                 <div class="d-flex justify-content-between flex-lg-wrap">
-                                                    <p class="text-dark fs-5 fw-bold mb-0">$4.99 / kg</p>
-                                                    <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
+                                                    <p class="text-dark fs-5 fw-bold mb-0">P 25,500</p>
+                                                    <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="me-2 text-primary"><HeartIcon /></i>구매하기</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -229,15 +186,14 @@ function Shop() {
                                     <div class="col-md-6 col-lg-6 col-xl-4">
                                         <div class="rounded position-relative fruite-item">
                                             <div class="fruite-img">
-                                                <img src="img/fruite-item-2.jpg" class="img-fluid w-100 rounded-top" alt="" />
+                                                <img src="img/best5.jpg" class="img-fluid w-100 rounded-top" alt="" />
                                             </div>
-                                            <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style={{top: '10px', left: '10px'}}>Fruits</div>
                                             <div class="p-4 border border-secondary border-top-0 rounded-bottom">
-                                                <h4>Raspberries</h4>
-                                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
+                                                <h4>굽네치킨</h4>
+                                                <p><small>고추바사삭+바질토마토피자+콜라1.25L</small></p>
                                                 <div class="d-flex justify-content-between flex-lg-wrap">
-                                                    <p class="text-dark fs-5 fw-bold mb-0">$4.99 / kg</p>
-                                                    <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
+                                                    <p class="text-dark fs-5 fw-bold mb-0">P 29,500</p>
+                                                    <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="me-2 text-primary"><HeartIcon /></i>구매하기</a>
                                                 </div>
                                             </div>
                                         </div>

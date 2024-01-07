@@ -26,7 +26,7 @@ function Main() {
                                     {/* <img src="img/buy (1).png" alt="First slide"/> */}
                             <a href="/shop" class="banner-btn btn border-2 border-white rounded-pill text-dark py-3 px-5">BUY</a>
                                     <img src="img/ss.png" alt="First slide"/>
-                                    <h4 class="text-primary">지금 바로 구매하세요.....!</h4>
+                                    <h4 class="text-primary">지금 바로 구매하세요...!</h4>
                                     {/* <img src="img/sale.png" alt="First slide"/> */}
                                 </div>
                             </div>
