@@ -523,3 +523,29 @@
  height: 1000px;
 }
 
+/* 이미지 스타일링을 위한 CSS */
+.fruite-img img {
+  max-width: 100%; /* 카드 내에서 이미지 크기 비율 유지 */
+  max-height: 100%; /* 카드 내에서 이미지 크기 비율 유지 */
+  object-fit: cover; /* 이미지가 카드 영역에 맞게 잘릴 수 있도록 */
+}
+
+/* 폼의 크기를 고정하는 CSS */
+.fruite-item {
+  width: 300px;
+  height: 400px; 
+}
+
+body {
+  overflow-x: hidden; /* 가로 스크롤바를 숨김 */
+}
+
+
+/* 모달 스타일 */
+
+
+.modal-content {
+  background-color: rgba(255, 255, 255, 0.847);
+  border-radius: 8px;
+  width: 100%;
+}

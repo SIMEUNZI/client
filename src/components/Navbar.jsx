@@ -1,18 +1,23 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import { useRecoilValue, useSetRecoilState } from 'recoil';
+import { loginState } from '../recoils/login';
 
 function Navbar() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
-
-  // const handleLogin = () => {
-  //   // 로그인 처리
-  //   setIsLoggedIn(true);
-  // };
+  const navigate = useNavigate();
+  const loginUser = useRecoilValue(loginState);
+  const setLoginUser = useSetRecoilState(loginState);
 
   const handleLogout = () => {
-    // 로그아웃 처리
+    setLoginUser(null);
     setIsLoggedIn(false);
+    navigate('/login');
   };
+
+  if (loginUser && !isLoggedIn) {
+    setIsLoggedIn(true);
+  }
 
   return (
     <div className="d-flex m-2 me-0">

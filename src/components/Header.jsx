@@ -88,7 +88,7 @@ function Header() {
                             <div class="nav-item dropdown">
                                 <Link to="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">My pages</Link>
                                 <div class="dropdown-menu m-0 bg-secondary rounded-0">
-                                    <Link to="cart.html" class="dropdown-item">Sell or Buy</Link>
+                                    <Link to="sell" class="dropdown-item">Sell or Buy</Link>
                                     <Link to="chackout.html" class="dropdown-item">Wishlist</Link>
                                     <Link to="testimonial.html" class="dropdown-item">Profile</Link>
                                     <Link to="404.html" class="dropdown-item">404 Page</Link>

@@ -8,7 +8,7 @@ function HeartIcon() {
   };
 
   return (
-    <i className={`fa fa-heart${isFilled ? ' text-secondary' : ''}`} onClick={toggleHeart}></i>
+    <i className={`fa fa-heart${isFilled ? ' text-danger' : ''}`} onClick={toggleHeart}></i>
   );
 }
 
